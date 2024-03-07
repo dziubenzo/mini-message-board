@@ -2,11 +2,11 @@
 <form action='/new' method='post'>
   <label for='user'>
     User:
-    <input type='text' name='user' id='user' />
+    <input type='text' name='user' id='user' value='{{user}}' />
   </label>
-  <label for='message'>
+  <label for='text'>
     Message:
-    <textarea name='message' id='message' rows='4'></textarea>
+    <textarea name='text' id='text' rows='4'>{{text}}</textarea>
   </label>
   <button type='submit'>Send Message</button>
 </form>

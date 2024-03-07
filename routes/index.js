@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const bodyParser = require('body-parser');
 
 const messages = [
   {
@@ -19,12 +20,29 @@ const messages = [
   },
 ];
 
+router.use(bodyParser.urlencoded({ extended: false }));
+
 router.get('/', (req, res) => {
   res.render('index', { messages });
 });
 
-router.get('/new', (req, res) => {
-  res.render('form');
-});
+router
+  .route('/new')
+  .get((req, res) => {
+    res.render('form');
+  })
+  .post((req, res) => {
+    const user = req.body.user;
+    const text = req.body.text;
+
+    // Do nothing if any field is empty but do not erase data
+    if (!user || !text) {
+      res.render('form', { user, text });
+      // Add message to array and redirect to '/' otherwise
+    } else {
+      messages.push({ text, user, added: new Date().toLocaleString('en-GB') });
+      res.redirect('/');
+    }
+  });
 
 module.exports = router;
