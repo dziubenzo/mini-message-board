@@ -20,7 +20,7 @@ const messages = [
 ];
 
 router.get('/', (res, req) => {
-  req.render('index', {messages});
+  req.render('index', { messages });
 });
 
 module.exports = router;
