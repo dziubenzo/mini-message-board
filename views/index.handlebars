@@ -1,15 +1,16 @@
+<h1>Messages</h1>
 <table>
   <tr>
     <th>Text</th>
     <th>User</th>
     <th>Added</th>
   </tr>
-    {{#each messages}}
-  <tr>
-    <td>{{this.text}}</td>
-    <td>{{this.user}}</td>
-    <td>{{this.added}}</td>
-  </tr>
-    {{/each}} 
+  {{#each messages}}
+    <tr>
+      <td>{{this.text}}</td>
+      <td>{{this.user}}</td>
+      <td>{{this.added}}</td>
+    </tr>
+  {{/each}}
 </table>
-<a href="/new">Add New User</a>
+<a href='/new'>Add New User</a>
