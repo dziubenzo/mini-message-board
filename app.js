@@ -1,11 +1,14 @@
 const express = require('express');
-const indexRoute = require('./routes/index');
+const { engine } = require('express-handlebars');
 
 const app = express();
 
+const indexRoute = require('./routes/index');
+
 const PORT = 3000;
 
-app.set('view engine', 'ejs');
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
 app.set('views', './views');
 
 app.use('/', indexRoute);
