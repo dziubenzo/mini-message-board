@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(83, 83, 83);
+  color: rgb(233, 233, 233);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+tr,
+td {
+  padding: 1em;
+}
+
+a {
+  color: rgb(233, 233, 233);
+}

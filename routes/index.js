@@ -5,17 +5,17 @@ const messages = [
   {
     text: 'Hi there!',
     user: 'Amando',
-    added: new Date(),
+    added: new Date().toLocaleString('en-GB'),
   },
   {
     text: 'Hello World!',
     user: 'Charles',
-    added: new Date(),
+    added: new Date().toLocaleString('en-GB'),
   },
   {
     text: 'Hey!',
     user: 'Robercik',
-    added: new Date(),
+    added: new Date().toLocaleString('en-GB'),
   },
 ];
 
